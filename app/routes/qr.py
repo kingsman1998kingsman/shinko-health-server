@@ -11,8 +11,8 @@ router = APIRouter()
 UTC = timezone.utc
 
 # ===== Supabase Config (use ENV on Railway) =====
-SUPABASE_URL = os.getenv("SUPABASE_URL", "")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+SUPABASE_URL = "https://ymsctiblyflxmbgeptpj.supabase.co"
+SUPABASE_KEY = "sb_publishable_EwNC0U18zZZ6f69L6Phl7w_httP81XW"
 
 if not SUPABASE_URL or not SUPABASE_KEY:
     # Don't crash import; but endpoints will fail clearly.

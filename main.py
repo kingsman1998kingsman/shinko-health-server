@@ -11,8 +11,8 @@ app = FastAPI()
 
 # ===== CORS (because phone/tablet are different domains) =====
 ALLOWED_ORIGINS = [
-    os.getenv("MOBILE_ORIGIN", "https://shinko-health-phone-production.up.railway.app"),
-    os.getenv("TABLET_ORIGIN", "https://shinko-health-tablet-production.up.railway.app"),
+  "https://shinko-health-mobile.netlify.app",
+  "https://shinko-health-tablet.netlify.app",
 ]
 
 app.add_middleware(
