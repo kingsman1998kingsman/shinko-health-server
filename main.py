@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 SUPABASE_URL = "https://ymsctiblyflxmbgeptpj.supabase.co"
-SUPABASE_KEY = "PASTE_YOUR_REAL_SUPABASE_ANON_OR_SERVICE_ROLE_KEY"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inltc2N0aWJseWZseG1iZ2VwdHBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2NTUyODYsImV4cCI6MjA4NzIzMTI4Nn0.zspLRpB843cPcnLLaZk--a4163Uce9x0iN7mbGtnfGA"
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # routes
