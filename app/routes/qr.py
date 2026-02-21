@@ -12,7 +12,7 @@ UTC = timezone.utc
 
 # ===== Supabase Config (use ENV on Railway) =====
 SUPABASE_URL = "https://ymsctiblyflxmbgeptpj.supabase.co"
-SUPABASE_KEY = "sb_publishable_EwNC0U18zZZ6f69L6Phl7w_httP81XW"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inltc2N0aWJseWZseG1iZ2VwdHBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2NTUyODYsImV4cCI6MjA4NzIzMTI4Nn0.zspLRpB843cPcnLLaZk--a4163Uce9x0iN7mbGtnfGA"
 
 if not SUPABASE_URL or not SUPABASE_KEY:
     # Don't crash import; but endpoints will fail clearly.
