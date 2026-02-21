@@ -11,7 +11,7 @@ app = FastAPI()
 
 # ===== CORS (because phone/tablet are different domains) =====
 ALLOWED_ORIGINS = [
-    os.getenv("PHONE_ORIGIN", "https://shinko-health-phone-production.up.railway.app"),
+    os.getenv("MOBILE_ORIGIN", "https://shinko-health-phone-production.up.railway.app"),
     os.getenv("TABLET_ORIGIN", "https://shinko-health-tablet-production.up.railway.app"),
 ]
 
