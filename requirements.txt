@@ -7,3 +7,5 @@ httpx
 realtime
 postgrest
 storage3
+uuid
+email-validator

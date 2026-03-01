@@ -3,12 +3,13 @@ from datetime import datetime, timedelta, timezone
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from supabase import Client
+from uuid import UUID # Add this import
 
 router = APIRouter()
 UTC = timezone.utc
 
 class CreateQRRequest(BaseModel):
-    user_id: str
+    user_id: UUID  # Change 'str' to 'UUID'
     ttl_seconds: int = 30
 
 class ConsumeQRRequest(BaseModel):
@@ -20,9 +21,10 @@ def init_qr_routes(supabase: Client):
         token = secrets.token_urlsafe(32)
         expires_at = datetime.now(UTC) + timedelta(seconds=data.ttl_seconds)
         
+        # FIX: Wrap data.user_id in str() so it can be sent as JSON
         resp = supabase.table("qr_tokens").insert({
             "token": token,
-            "user_id": data.user_id,
+            "user_id": str(data.user_id), # <-- Convert UUID object to string here
             "expires_at": expires_at.isoformat()
         }).execute()
 

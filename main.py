@@ -12,8 +12,8 @@ app = FastAPI(title="Shinko Health API - Localhost")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://shinko-health-mobile.netlify.app",
-        "https://shinko-health-tablet.netlify.app",
+        "https://shinko-mobile.netlify.app",
+        "https://shinko-tablet.netlify.app",
         "http://localhost:5500",  # Add this for local testing
         "http://127.0.0.1:5500",  # Add this for local testing
         "http://localhost:5501",  # Add this for local testing
@@ -24,8 +24,8 @@ app.add_middleware(
 )
 
 # Replace these with your actual Supabase credentials for local testing
-SUPABASE_URL = os.getenv("SUPABASE_URL", "https://masjsqdopdecrvjnsyrf.supabase.co")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hc2pzcWRvcGRlY3J2am5zeXJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2ODQ1NjQsImV4cCI6MjA4NzI2MDU2NH0.CIQneYtGVLtkY5SnDkZsKSYNT7qP_eS72J9P3nfBt0M")
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://yzlnimudrgwgvaungghf.supabase.co")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6bG5pbXVkcmd3Z3ZhdW5nZ2hmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTkxNDQzNywiZXhwIjoyMDg3NDkwNDM3fQ.eXxAUy0sA1E5sXf3Egr9hC5kl-hYF9ksXNhr8_Conxs")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Register Routes
